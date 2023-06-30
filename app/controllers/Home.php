@@ -3,7 +3,10 @@
 {
     public function index()
     {
-        echo 'This is the home controller';
+        $model = new Model();
+        $arr['id'] = 1;
+        $result = $model->where($arr);
+        show($result);
         $this->view('home');
     }
 }
